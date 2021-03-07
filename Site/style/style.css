@@ -80,7 +80,6 @@ div.box-contato-git{
   width: 250px;
   height: 280px;
   border-radius: 10px;
-  position: relative;
 }
 
 #contato-git{
@@ -89,4 +88,13 @@ div.box-contato-git{
 
 #contato-git:hover{
   opacity: 100%;
+}
+
+.box-contato-git:hover{
+  width: 260px;
+  height: 290px;
+}
+
+#sobre{
+  text-align: center;
 }
