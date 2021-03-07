@@ -1,0 +1,63 @@
+div.scrollmenu {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #1b191a;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  
+  div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    margin: 0%;
+  }
+  
+  div.scrollmenu a:hover {
+    background-color: #000000;
+  }
+
+  a.link-aula{
+    color: white;
+    position: relative;
+    top: -15px;
+  }
+
+  div.box {
+    color: white;
+    background-image: url('../Imagens/logo-web.png');
+    background-repeat: no-repeat;
+    background-position-y: 80px;
+    text-align: center;
+    background-color: #1b191a;
+    width: 200px;
+    height: 280px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  body{
+      color: white;
+      height: 100%;
+      background-image:url('../Imagens/fundoSite.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: beige;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      
+  }
+
+
+
+a.link-download {
+    position: relative;
+    top: 95px; 
+}
+
+h1{
+    text-align: center;
+}
+
+img.obra {
+    text-align: center;
+}
