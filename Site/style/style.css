@@ -42,14 +42,14 @@ div.scrollmenu {
   }
 
   body{
-    color: white;
+    color: yellow;
     height: 100%;
-    background-image:url('../Imagens/fundoSite.jpg');
-    background-repeat: repeat;
+    background-image: linear-gradient(to bottom left, #483d8b, #8e63f1);
+    background-repeat: no-repeat;
     background-size: cover;
     background-color: beige;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      
+    min-height: 1000px;
   }
 
 
