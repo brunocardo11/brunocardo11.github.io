@@ -1,5 +1,5 @@
 div.scrollmenu {
-    background-color: #1b191a;
+    background-color: #2e265f;
     overflow: auto;
     white-space: nowrap;
     border-radius: 10px;
@@ -13,13 +13,20 @@ div.scrollmenu {
     text-decoration: none;
     margin: 0%;
     border-radius: 5px;
+    left: 20px;
   }
   
   div.scrollmenu a:hover {
-    background-color: #000000;
+    background-color: #5d4fb6;
     height: 10px;
     padding-top: 5px;
 
+  }
+
+  div a.active{
+    background-color: #5d4fb6;
+    height: 10px;
+    padding-top: 5px;
   }
 
   a.link-aula{
@@ -35,7 +42,7 @@ div.scrollmenu {
     background-repeat: no-repeat;
     background-position-y: 80px;
     text-align: center;
-    background-color: #1b191a;
+    background-color: #2e265f;
     width: 200px;
     height: 280px;
     border-radius: 10px;
@@ -56,7 +63,7 @@ div.scrollmenu {
 
 a.link-download {
   position: relative;
-  top: 95px; 
+  top: 95px;
 }
 
 h1{
@@ -68,7 +75,7 @@ div.obra {
 }
 
 a.link-aula:hover {
-  color: #d16138;
+  color: yellow;
 }
 
 div.box-contato-git{
@@ -80,21 +87,29 @@ div.box-contato-git{
   width: 250px;
   height: 280px;
   border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 #contato-git{
   opacity: 90%;
+  position: relative;
+  bottom: 10%;
+}
+
+.textoContato{
+  position: relative;
+  bottom: 5%;
 }
 
 #contato-git:hover{
   opacity: 100%;
 }
-
-.box-contato-git:hover{
-  width: 260px;
-  height: 290px;
-}
-
 #sobre{
   text-align: center;
+}
+
+#img-download:hover{
+  width: 195px;
 }
