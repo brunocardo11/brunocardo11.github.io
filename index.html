@@ -15,18 +15,15 @@
             flex-direction: column;
         }
         .loading{
-            width: 200px;
-            height: 200px;
-            border: solid rgb(0, 0, 0);
+            width: 300px;
+            height: 300px;
+            border: solid rgb(95, 95, 95);
             border-radius: 50%;
             border-top-color: rgb(255, 255, 255);
-            animation: spin 1s linear infinite;
+            animation: loading 1s linear infinite;
         }
-
-
         
-
-        @keyframes spin {
+        @keyframes loading {
             to{
                 transform: rotate(360deg);
             }
@@ -35,8 +32,28 @@
 
         .redirecionando{
             bottom: 50%;
-            transform: translate(0,-230%);
+            transform: translate(-33%,-225%);
             position: relative;
+            font-size: 18pt;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            display: flex;
+            left: 50%;
+        }
+
+        #pontos{
+            animation: escrevendo 1s normal infinite steps(40);
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        @keyframes escrevendo {
+            from{
+                width: 0;
+            }
+            to{
+                width: 22.781px;
+            }
+
         }
     </style>
 
@@ -44,6 +61,11 @@
 <body>
     <div class="loading">
     </div>
-    <div class="redirecionando"><h3>Redirecionando...</h3></div>
+    <div class="redirecionando">
+        <p>Redirecionando</p>
+        <div id="pontos"><p>...</p></div>
+        
+        
+    </div>
 </body>
 </html>
