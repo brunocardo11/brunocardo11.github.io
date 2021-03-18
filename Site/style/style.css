@@ -43,9 +43,11 @@ div.scrollmenu {
     background-position-y: 80px;
     text-align: center;
     background-color: #2e265f;
-    width: 200px;
-    height: 280px;
+    width: 210px;
+    height: 310px;
     border-radius: 10px;
+    display: inline-block;
+    margin-left: 10px;
   }
 
   body{
@@ -110,7 +112,7 @@ div.box-contato-git{
   text-align: center;
 }
 
-#img-download:hover{
+.img-download:hover{
   width: 195px;
 }
 
