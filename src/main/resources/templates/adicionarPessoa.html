@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta codigoSemana2="1396155658">
-    <link rel="stylesheet" href="css/style.css">
+    <meta codigoSemana3="1656224928">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon"/>
     <title>PWeb - by allenBruno</title>
 </head>
 <body>
@@ -15,48 +16,51 @@
 			home
 			</span> Início </a></li>
 		<hr />
-		<li><a href="public/noticias.html"><span class="material-icons">
+		<li><a href="public/noticias.html"><span class="material-icons md-18">
 			web
 			</span> Canais de notícias</a></li>
 		<hr />
-		<li><a href="/adicionarPessoa.html" id="active"><span class="material-icons">
+		<li><a href="/adicionarPessoa" id="active"><span class="material-icons md-18">
 			person_add
 			</span> Adicionar pessoas</a></li>
-		<li><a href="/listarPessoas.html"><span class="material-icons">
+		<li><a href="/listarPessoas"><span class="material-icons md-18">
 			people
 			</span> Listar pessoas</a></li>
 		<hr />
-		<li><a href="public/sobre.html"><span class="material-icons">
+		<li><a href="public/sobre.html"><span class="material-icons md-18">
 			info
 			</span> Sobre o site</a></li>
-		<li><a href="public/contato.html"><span class="material-icons">
+		<li><a href="public/contato.html"><span class="material-icons md-18">
 			email
 			</span> Mande um e-Mail</a></li>
 	</ul>
-    <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <div class="conteudo">
     <h1>Fomulário para cadastro de pessoas:</h1>
-    <form method="post">
+    <form 
+    	method="POST" 
+    	th:object="${pessoa}" 
+    	th:action="@{/adicionarPessoa}">
     	<div class="form">
             <label>Nome completo*:</label>
-            <input type="text" name="nome" id="nome" placeholder="Seu nome completo" required>
+            <input type="text" name="nome" id="nome" placeholder="Seu nome completo" th:field="*{nome}" required>
             <br>
         </div>
         <div class="form">
             <label>Data de nascimento*:</label>
-            <input type="date" name="data" id="data" required>
+            <input type="date" name="data" id="data" th:field="*{dataNascimento}" >
         </div>
         <div>
             <label>e-Mail*:</label>
-            <input type="email" name="mail" id="mail" placeholder="nome@dominio.com" required>
+            <input type="text" name="mail" id="mail" placeholder="nome@dominio.com" th:field="*{email}" required>
         </div>
-        <div class="form">
-            <p class="sexo" id="sexo">Sexo*:</p>
-            <p><input type="radio" name="sexo" id="sexo1" value="masculino" required>Masculino</p>
-            <p><input type="radio" name="sexo" id="sexo2" value="feminino" required>Feminino</p>
-            <p><input type="radio" name="sexo" id="sexo3" value="não informar" required>Não informar</p>
+        <div class="form" id="box">
+            <p class="sexo" id="sexo">Gênero*:</p>
+            <p><input type="radio" name="sexo" id="sexo1" value="Masculino" th:field="*{genero}" required>Masculino</p>
+            <p><input type="radio" name="sexo" id="sexo2" value="Feminino" th:field="*{genero}"  required>Feminino</p>
+            <p><input type="radio" name="sexo" id="sexo3" value="Não Informado" th:field="*{genero}" required>Não informar</p>
         </div>
-        <button type="reset" class="button">Limpar</button>
-        <button type="submit" class="button" >Cadastrar!</button>
+        <button type="reset" class="button" title="Limpar">Limpar</button>
+        <button type="submit" class="button" title="Adicionar">Adicionar!</button>
     </form>
     </div>
 </body>
